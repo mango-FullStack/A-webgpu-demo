@@ -1,0 +1,22 @@
+{
+    "brace_style": "none,preserve-inline",
+    "indent_size": 4,
+    "indent_char": " ",
+    "jslint_happy": false,
+    "unformatted": [""],
+    "css": {
+        "indent_size": 4,
+        "newline_between_rules": false,
+        "selector_separator_newline": false
+    },
+    "comment": {
+        "indent_size": "缩进长度（默认为2）",
+        "indent_char": "缩进填充的内容（充满♂",
+        "jslint_happy": "若你要搭配jslint使用，请开启此选项",
+        "unformatted": "这里放不需要格式化的标签类型。注意 template 也是默认不格式化的，.vue 的template 标签如果需要格式化请在 .jsbeautifyrc 重新定义不带 template 的声明属性",
+        "css": {
+            "newline_between_rules": "在CSS规则之间添加换行符",
+            "selector_separator_newline": "在多个选择器之间添加换行符"
+        }
+    }
+}

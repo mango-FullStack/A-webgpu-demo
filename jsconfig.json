@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@app/*": ["app/*"],
+            "@utils/*": ["utils/*"],
+            "@root/*": ["app/client/*"],
+            "@styles/*": ["app/client/styles/*"],
+            "@stream": ["app/client/stream"],
+            "@modules": ["app/client/modules/*"],
+            "@componets": ["app/client/componets/*"]
+        },
+        "target": "ES6",
+        "module": "commonjs",
+        "experimentalDecorators": true
+    },
+    "include": ["**/*"],
+    "exclude": ["node_modules"]
+}
