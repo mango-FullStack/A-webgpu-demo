@@ -33,7 +33,7 @@ export default class GPUDEMO extends PureComponent {
         const squareIndex = [ 0, 1, 2, 1, 2, 3 ]
         const squareMVMatrix = new Matrix4().makeTranslation(1.5, 0.0, -7.0)
 
-        const backgroundColor = { r: 0, g: 0, b: 0, a: 1.0 }
+        const backgroundColor = { r: 0.25, g: 0.5, b: 1, a: 1.0 }
         const triangleUniformBufferView = (pMatrix.toArray().concat(triangleMVMatrix.toArray()))
         const squareUniformBufferView = (pMatrix.toArray().concat(squareMVMatrix.toArray()))
 
@@ -41,8 +41,8 @@ export default class GPUDEMO extends PureComponent {
         await this.instance.init()
         await this.instance.initSwapChain(context)
         
-        this.instance.createRenderPass('square', { width, height, color: backgroundColor })
-        this.instance.createRenderPipeline('square', { fxCode, vxCode })
+        this.instance.createRenderPass('square', { color: backgroundColor })
+        this.instance.createRenderPipeline('square', { width, height, fxCode, vxCode })
 
         const $triangle = { vxArray: triangleVertex, idxArray: triangleIndex, mxArray: triangleUniformBufferView }
         const $square = { vxArray: squareVertex, idxArray: squareIndex, mxArray: squareUniformBufferView  }
